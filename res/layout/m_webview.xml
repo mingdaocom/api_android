@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff">
+	<WebView
+	    android:id="@+id/webView"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_below="@+id/lessonlist_title"/>
+   <ProgressBar
+                android:id="@+id/progressBar"
+		        android:layout_width="50dip"   
+		        android:layout_height="50dip" 
+                android:layout_centerInParent="true"
+                android:visibility="gone" 
+                style="?android:attr/progressBarStyleSmall"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/log_progressbar_drawable"/>
+</RelativeLayout>
