@@ -1,9 +1,10 @@
-����Android �汾��SDK������������û���Ȩ
+###明道Android 版本的SDK，包含了用户鉴权和几个常用的API调用
 
-�˰汾ʹ��Android SDK 17��������Ŀ����Eclipse���뼴�ɣ�����SDK�汾���޸�project.properties�е�target����
+此版本基于Android SDK 17，工程项目可用Eclipse导入打开即可，其它Android SDK版本请修改project.properties中的target即可
+***
+调用API 测试流程请修改MainActivity中的appKey和appSecret内容
+***
+公有云请到明道开放平台创建应用 <http://open.mingdao.com> 私有部署请联系管理员创建应用并获取令牌
 
-������ȨAPI���޸�MainActivity�е�appKey��appSecret����
-�������뵽��������ƽ̨����Ӧ�� http://open.mingdao.com
-˽�в�������ϵ����Ա����Ӧ�ò���ȡ����
 
-���忪��ָ���������������ƽָ̨�ϡ�
+具体开发指南请见《[明道开放平台指南](http://open.mingdao.com/md_develop_tread.html)》
