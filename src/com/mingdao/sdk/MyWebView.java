@@ -3,8 +3,11 @@ package com.mingdao.sdk;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.mingdao.demo.MainActivity;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -20,6 +23,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 public class MyWebView extends Activity {
 
@@ -82,7 +86,12 @@ public class MyWebView extends Activity {
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if(keyCode == KeyEvent.KEYCODE_BACK && webView==null){
+			finish();
+			return true;
+		}
 		if (keyCode == KeyEvent.KEYCODE_BACK && !webView.canGoBack()) {
+			
 			finish();
 			return true;
 		}
@@ -139,8 +148,26 @@ public class MyWebView extends Activity {
 			// TODO Auto-generated method stub
 			super.onPostExecute(result);
 			pd.dismiss();
-			if (result >= 38) {// 37之后支持 sso sdk
-
+			if (result >= 37) {// 37之后支持 sso sdk
+				ComponentName componetName = new ComponentName(  
+		                //这个是另外一个应用程序的包名  
+		                "com.mingdao",  
+		                //这个参数是要启动的Activity  
+		                "com.mingdao.sso.FirstActivity");  
+		         
+		            try {  
+		                Intent i = new Intent();  
+		                i.setComponent(componetName);  
+		                i.putExtra("redirect_uri", redirect_uri);
+						i.putExtra("app_key", app_key);
+						i.putExtra("app_secret", app_secret);
+						startActivityForResult(i,1);
+		            } catch (Exception e) { 
+		              System.out.println(e.toString());
+		              Toast.makeText(getApplicationContext(), "没有找到指定的应用程序！", 0).show();  
+		                  
+		            }
+				
 			} else {// 开web
 					// 初始化web
 				url = "https://api.mingdao.com/oauth2/authorize?" + "app_key="

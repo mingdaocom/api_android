@@ -35,12 +35,6 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-//				String url="https://api.mingdao.com/oauth2/authorize?"
-//						+"app_key="+app_key
-//						+"&redirect_uri="+redirect_uri
-//						//+"&response_type="+response_type
-//						+"&display=mobile";
-//				Log.i("测试地址", url);
 				Intent i=new Intent(MainActivity.this,MyWebView.class);
 				i.putExtra("redirect_uri", redirect_uri);
 				i.putExtra("app_key", app_key);
@@ -55,12 +49,12 @@ public class MainActivity extends Activity {
 		if (requestCode ==1&&resultCode == Activity.RESULT_OK) {
 			String result=data.getStringExtra("result");
 			System.out.println("aaaaaaaaaaa"+result);
-			setResult(result);
+			setResultTextView(result);
 		}
 	}
 	
 	
-	private void setResult(String result) {
+	private void setResultTextView(String result) {
 		// TODO Auto-generated method stub
 		TextView tv=(TextView)findViewById(R.id.testTv);
 		tv.setText("结果：\n"+result);
