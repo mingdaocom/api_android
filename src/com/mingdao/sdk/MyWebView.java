@@ -263,4 +263,14 @@ public class MyWebView extends Activity {
 		}
 
 	}
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode ==1&&resultCode == Activity.RESULT_OK) {
+			String result=data.getStringExtra("result");
+			Intent intent=new Intent();  
+			intent.putExtra("result", result);
+			MyWebView.this.setResult(RESULT_OK,intent);
+			MyWebView.this.finish();
+		}
+	}
 }
