@@ -1,7 +1,7 @@
 package com.mingdao.demo;
 
 import com.mingdao.sdk.HttpUtil;
-import com.mingdao.sdk.MyWebView;
+import com.mingdao.sdk.SSOActivity;
 import com.mingdao.sdk.R;
 import com.mingdao.sdk.R.id;
 import com.mingdao.sdk.R.layout;
@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Intent i=new Intent(MainActivity.this,MyWebView.class);
+				Intent i=new Intent(MainActivity.this,SSOActivity.class);
 				i.putExtra("redirect_uri", redirect_uri);
 				i.putExtra("app_key", app_key);
 				i.putExtra("app_secret", app_secret);

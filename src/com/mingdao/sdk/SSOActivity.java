@@ -28,7 +28,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-public class MyWebView extends Activity {
+public class SSOActivity extends Activity {
 
 	private WebView webView;
 	private ProgressBar pb;
@@ -42,7 +42,7 @@ public class MyWebView extends Activity {
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.m_webview);
+		setContentView(R.layout.md_sso);
 		app_key = getIntent().getStringExtra("app_key");
 		app_secret = getIntent().getStringExtra("app_secret");
 		redirect_uri = getIntent().getStringExtra("redirect_uri");
@@ -134,7 +134,7 @@ public class MyWebView extends Activity {
 		protected void onPreExecute() {
 			// TODO Auto-generated method stub
 			super.onPreExecute();
-			pd = createLoadingDialog(MyWebView.this, "正在设置，请稍候");
+			pd = createLoadingDialog(SSOActivity.this, "正在设置，请稍候");
 			pd.show();
 		}
 
@@ -144,7 +144,7 @@ public class MyWebView extends Activity {
 			PackageInfo packageInfo;
 			int version = 0;
 			try {
-				packageInfo = MyWebView.this.getPackageManager()
+				packageInfo = SSOActivity.this.getPackageManager()
 						.getPackageInfo("com.mingdao", 0);
 			} catch (NameNotFoundException e) {
 				packageInfo = null;
@@ -200,7 +200,7 @@ public class MyWebView extends Activity {
 				webSetting.setSupportZoom(true);
 				webSetting.setUseWideViewPort(true);
 
-				CookieSyncManager.createInstance(MyWebView.this);
+				CookieSyncManager.createInstance(SSOActivity.this);
 				CookieManager cookieManager = CookieManager.getInstance();
 				cookieManager.removeAllCookie();
 				webView.setWebViewClient(wvc);
@@ -246,8 +246,8 @@ public class MyWebView extends Activity {
 			mProgressDialog.cancel();
 			Intent intent=new Intent();  
 			intent.putExtra("result", result);
-			MyWebView.this.setResult(RESULT_OK,intent);
-			MyWebView.this.finish();
+			SSOActivity.this.setResult(RESULT_OK,intent);
+			SSOActivity.this.finish();
 			
 			
 		}
@@ -255,7 +255,7 @@ public class MyWebView extends Activity {
 		@Override
 		protected void onPreExecute() {
 			// TODO Auto-generated method stub
-			mProgressDialog = new ProgressDialog(MyWebView.this);
+			mProgressDialog = new ProgressDialog(SSOActivity.this);
 			mProgressDialog.setMessage("正在获取授权信息");
 			mProgressDialog.setIndeterminate(true);
 			mProgressDialog.setCancelable(false);
@@ -283,10 +283,10 @@ public class MyWebView extends Activity {
 			String result=data.getStringExtra("result");
 			Intent intent=new Intent();  
 			intent.putExtra("result", result);
-			MyWebView.this.setResult(RESULT_OK,intent);
-			MyWebView.this.finish();
+			SSOActivity.this.setResult(RESULT_OK,intent);
+			SSOActivity.this.finish();
 		}else if(requestCode ==1&&resultCode == Activity.RESULT_CANCELED){
-			MyWebView.this.finish();
+			SSOActivity.this.finish();
 		}
 	}
 }

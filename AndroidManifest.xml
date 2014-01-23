@@ -24,7 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.mingdao.sdk.MyWebView"></activity>
+        <!-- 明道sdk 必须添加-->
+        <activity android:name="com.mingdao.sdk.SSOActivity"></activity>
     </application>
 
 </manifest>

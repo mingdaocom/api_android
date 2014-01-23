@@ -10,7 +10,7 @@
         android:id="@+id/lessonlist_title"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:background="@drawable/trend_item_pic_bg" >
+        android:background="@drawable/md_titlebg" >
         <ImageView
             android:id="@+id/leftButton"
             android:layout_width="40dip"
@@ -19,7 +19,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="5dp"
-            android:src="@drawable/btn_back_bg" >
+            android:src="@drawable/md_btn_back_bg" >
         </ImageView>
         <View
             android:layout_width="1px"
@@ -55,5 +55,5 @@
                 android:visibility="gone" 
                 style="?android:attr/progressBarStyleSmall"
                 android:indeterminate="true"
-                android:indeterminateDrawable="@drawable/log_progressbar_drawable"/>
+                android:indeterminateDrawable="@drawable/md_progressbar_drawable"/>
 </RelativeLayout>
