@@ -17,11 +17,14 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -35,14 +38,25 @@ public class MyWebView extends Activity {
 	private String redirect_uri;// //需要换成您的应用设置的回调地址
 
 	private String url;
-
+	private ImageView leftButton;
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.m_webview);
 		app_key = getIntent().getStringExtra("app_key");
 		app_secret = getIntent().getStringExtra("app_secret");
 		redirect_uri = getIntent().getStringExtra("redirect_uri");
+		
+		leftButton=(ImageView)findViewById(R.id.leftButton);
+		leftButton.setOnClickListener(new OnClickListener(){
 
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				finish();
+			}
+			
+		});
 		new GetTypeTask().execute();
 	}
 
@@ -270,6 +284,8 @@ public class MyWebView extends Activity {
 			Intent intent=new Intent();  
 			intent.putExtra("result", result);
 			MyWebView.this.setResult(RESULT_OK,intent);
+			MyWebView.this.finish();
+		}else if(requestCode ==1&&resultCode == Activity.RESULT_CANCELED){
 			MyWebView.this.finish();
 		}
 	}

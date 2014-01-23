@@ -4,6 +4,44 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" 
     android:background="#ffffff">
+    
+    <!-- title -->
+    <RelativeLayout
+        android:id="@+id/lessonlist_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/trend_item_pic_bg" >
+        <ImageView
+            android:id="@+id/leftButton"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/btn_back_bg" >
+        </ImageView>
+        <View
+            android:layout_width="1px"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dip"
+            android:layout_toRightOf="@+id/leftButton"
+            android:background="#c9c9c9" />
+        <TextView
+            android:id="@+id/middleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="使用明道登录"
+            android:textColor="#949494"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+    
+    
 	<WebView
 	    android:id="@+id/webView"
     	android:layout_width="fill_parent"
