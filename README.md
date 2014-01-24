@@ -59,12 +59,12 @@ iOS平台：https://github.com/meihua-info/api_ios
 
 ![image](https://github.com/meihua-info/api_android/raw/master/doc/5.png)
 
-（6）实例：使用WebView授权
+（6）示例：使用WebView授权
 
 ![image](https://github.com/meihua-info/api_android/raw/master/doc/6.png)
 
 
-（7）实例：使用明道客户端授权
+（7）示例：使用明道客户端授权
 
 ![image](https://github.com/meihua-info/api_android/raw/master/doc/7.png)
 ***
