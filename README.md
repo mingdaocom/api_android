@@ -39,6 +39,32 @@ iOS平台：https://github.com/meihua-info/api_ios
 
 3、具体流程
 
-![image](https://github.com/meihua-info/api_android/blob/master/doc/1.png)
+（1）添加md_sso.jar、资源文件
 
+![image](https://github.com/meihua-info/api_android/raw/master/doc/1.png)
+
+（2）添加布局文件
+
+![image](https://github.com/meihua-info/api_android/raw/master/doc/2.png)
+
+（3）在AndroidManifest.xml里添加Activity声明 和 联网权限
+
+![image](https://github.com/meihua-info/api_android/raw/master/doc/3.png)
+
+（4）添加调用代码
+
+![image](https://github.com/meihua-info/api_android/raw/master/doc/4.png)
+
+（5）接收返回的accesstoken结果
+
+![image](https://github.com/meihua-info/api_android/raw/master/doc/5.png)
+
+（6）实例：使用WebView授权
+
+![image](https://github.com/meihua-info/api_android/raw/master/doc/6.png)
+
+
+（7）实例：使用明道客户端授权
+
+![image](https://github.com/meihua-info/api_android/raw/master/doc/7.png)
 ***
