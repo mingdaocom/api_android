@@ -37,5 +37,8 @@ iOS平台：https://github.com/meihua-info/api_ios
 
 2、请修改MainActivity中的app_key、app_secret和redirect_uri内容
 
-3、
+3、具体流程
+
+![image](https://github.com/meihua-info/api_android/blob/master/doc/1.png）
+
 ***
