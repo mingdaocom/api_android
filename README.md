@@ -39,6 +39,6 @@ iOS平台：https://github.com/meihua-info/api_ios
 
 3、具体流程
 
-![image](https://github.com/meihua-info/api_android/blob/master/doc/1.png）
+![image](https://github.com/meihua-info/api_android/blob/master/doc/1.png)
 
 ***
