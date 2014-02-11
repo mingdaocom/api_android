@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff">
+    
+    <!-- title -->
+    <RelativeLayout
+        android:id="@+id/md_54jsy7653_lessonlist_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/md_titlebg" >
+        <ImageView
+            android:id="@+id/md_54jsy7653_leftButton"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/md_btn_back_bg" >
+        </ImageView>
+        <View
+            android:layout_width="1px"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dip"
+            android:layout_toRightOf="@+id/md_54jsy7653_leftButton"
+            android:background="#c9c9c9" />
+        <TextView
+            android:id="@+id/md_54jsy7653_middleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="使用明道登录"
+            android:textColor="#949494"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+    
+    
+	<WebView
+	    android:id="@+id/md_54jsy7653_webView"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_below="@+id/md_54jsy7653_lessonlist_title"/>
+   <ProgressBar
+                android:id="@+id/md_54jsy7653_progressBar"
+		        android:layout_width="50dip"   
+		        android:layout_height="50dip" 
+                android:layout_centerInParent="true"
+                android:visibility="gone" 
+                style="?android:attr/progressBarStyleSmall"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/md_progressbar_drawable"/>
+</RelativeLayout>
