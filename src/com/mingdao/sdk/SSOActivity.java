@@ -1,9 +1,5 @@
 package com.mingdao.sdk;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import com.mingdao.demo.MainActivity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -47,7 +43,7 @@ public class SSOActivity extends Activity {
 		app_secret = getIntent().getStringExtra("app_secret");
 		redirect_uri = getIntent().getStringExtra("redirect_uri");
 		
-		leftButton=(ImageView)findViewById(R.id.leftButton);
+		leftButton=(ImageView)findViewById(R.id.md_54jsy7653_leftButton);
 		leftButton.setOnClickListener(new OnClickListener(){
 
 			@Override
@@ -188,9 +184,9 @@ public class SSOActivity extends Activity {
 						+ app_key + "&redirect_uri=" + redirect_uri
 						+ "&display=mobile";
 
-				webView = (WebView) findViewById(R.id.webView);
+				webView = (WebView) findViewById(R.id.md_54jsy7653_webView);
 				webView.setScrollBarStyle(0);
-				pb = (ProgressBar) findViewById(R.id.progressBar);
+				pb = (ProgressBar) findViewById(R.id.md_54jsy7653_progressBar);
 				WebSettings webSetting = webView.getSettings();
 				webSetting.setJavaScriptEnabled(true);
 				webSetting.setPluginsEnabled(true);

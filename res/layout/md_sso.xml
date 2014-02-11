@@ -7,12 +7,12 @@
     
     <!-- title -->
     <RelativeLayout
-        android:id="@+id/lessonlist_title"
+        android:id="@+id/md_54jsy7653_lessonlist_title"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:background="@drawable/md_titlebg" >
         <ImageView
-            android:id="@+id/leftButton"
+            android:id="@+id/md_54jsy7653_leftButton"
             android:layout_width="40dip"
             android:layout_height="40dip"
             android:layout_centerVertical="true"
@@ -26,10 +26,10 @@
             android:layout_height="40dip"
             android:layout_centerVertical="true"
             android:layout_marginRight="2dip"
-            android:layout_toRightOf="@+id/leftButton"
+            android:layout_toRightOf="@+id/md_54jsy7653_leftButton"
             android:background="#c9c9c9" />
         <TextView
-            android:id="@+id/middleTitle"
+            android:id="@+id/md_54jsy7653_middleTitle"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_centerInParent="true"
@@ -43,12 +43,12 @@
     
     
 	<WebView
-	    android:id="@+id/webView"
+	    android:id="@+id/md_54jsy7653_webView"
     	android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
-    	android:layout_below="@+id/lessonlist_title"/>
+    	android:layout_below="@+id/md_54jsy7653_lessonlist_title"/>
    <ProgressBar
-                android:id="@+id/progressBar"
+                android:id="@+id/md_54jsy7653_progressBar"
 		        android:layout_width="50dip"   
 		        android:layout_height="50dip" 
                 android:layout_centerInParent="true"
