@@ -2,7 +2,7 @@ package com.mingdao.demo;
 
 import com.mingdao.sdk.HttpUtil;
 import com.mingdao.sdk.SSOActivity;
-import com.mingdao.sdkdemo.R;
+import com.MeiHuaNet.R;
 
 
 
