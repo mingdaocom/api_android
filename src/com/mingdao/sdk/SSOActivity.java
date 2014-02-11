@@ -38,12 +38,12 @@ public class SSOActivity extends Activity {
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.md_sso);
+		setContentView(MResource.getIdByName(getApplication(), "layout", "md_sso"));
 		app_key = getIntent().getStringExtra("app_key");
 		app_secret = getIntent().getStringExtra("app_secret");
 		redirect_uri = getIntent().getStringExtra("redirect_uri");
 		
-		leftButton=(ImageView)findViewById(R.id.md_54jsy7653_leftButton);
+		leftButton=(ImageView)findViewById(MResource.getIdByName(getApplication(), "id", "md_54jsy7653_leftButton"));
 		leftButton.setOnClickListener(new OnClickListener(){
 
 			@Override
@@ -184,9 +184,9 @@ public class SSOActivity extends Activity {
 						+ app_key + "&redirect_uri=" + redirect_uri
 						+ "&display=mobile";
 
-				webView = (WebView) findViewById(R.id.md_54jsy7653_webView);
+				webView = (WebView) findViewById(MResource.getIdByName(getApplication(), "id", "md_54jsy7653_webView"));
 				webView.setScrollBarStyle(0);
-				pb = (ProgressBar) findViewById(R.id.md_54jsy7653_progressBar);
+				pb = (ProgressBar) findViewById(MResource.getIdByName(getApplication(), "id", "md_54jsy7653_progressBar"));
 				WebSettings webSetting = webView.getSettings();
 				webSetting.setJavaScriptEnabled(true);
 				webSetting.setPluginsEnabled(true);
