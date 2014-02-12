@@ -11,6 +11,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -41,7 +42,11 @@ public class MainActivity extends Activity {
 				i.putExtra("app_secret", app_secret);
 				startActivityForResult(i,1);		
 			}});
-		
+		//从明道客户端“我的应用”直接跳转后，接收token：
+		String token=getIntent().getStringExtra("token");
+		if(!TextUtils.isEmpty(token)){
+			setResultTextView(token);
+		}
 		
 	}
 	@Override
