@@ -2,9 +2,7 @@ package com.mingdao.demo;
 
 import com.mingdao.sdk.HttpUtil;
 import com.mingdao.sdk.SSOActivity;
-import com.mingdao.sdk.R;
-import com.mingdao.sdk.R.id;
-import com.mingdao.sdk.R.layout;
+
 
 import android.app.Activity;
 import android.app.ProgressDialog;
