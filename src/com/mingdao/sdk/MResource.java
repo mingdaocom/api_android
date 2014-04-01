@@ -4,8 +4,7 @@ package com.mingdao.sdk;
 import android.content.Context;
 
 /**
- * �����Դ�����ֻ�ȡ��IDֵ
- * @author mining
+ * @author mason 天盟
  *
  */
 public class MResource {

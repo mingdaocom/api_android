@@ -268,7 +268,6 @@ public class SSOActivity extends Activity {
 					+ "&code=" + params[0] + "&redirect_uri=" + redirect_uri;
 
 			String result = MDUtil.httpByGet2StringSSL(url, null, null);
-			//System.out.println(result);
 			return result;
 		}
 
